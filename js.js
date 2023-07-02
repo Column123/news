@@ -6,6 +6,9 @@ function add_image(){
     for (let i = 0; i < len; i++) {
         var image = document.createElement('img');
         image.src = news.articles[i].urlToImage;
+        if (image.src==null) {
+            continue;
+        }
         document.getElementById(`title${i}`).appendChild(image);
         
     }
@@ -35,7 +38,7 @@ function add_date(){
         dat = month + " " + date + " " + year;
         var date = document.createElement("span");
         date.className="date";
-        date.textContent = dat;
+        date.textContent = dat + "\n";
         document.getElementById(`description${i}`).append(date);
     }
 
@@ -46,11 +49,14 @@ function add_description()
 {
     for(let i=0; i<len; i++)
     {
-        
+        if (news.articles[i].description==null) {
+            continue;
+        }
         document.getElementById(`description${i}`).append(news.articles[i].description);
     }
 
 }
+
 
 
 
