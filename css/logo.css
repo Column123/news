@@ -1,0 +1,60 @@
+
+.logo{
+  user-select: none;
+  --background: rgb(255, 255, 255);
+  display:block;
+  grid-template-columns: initial;
+  justify-content: initial;
+  background-color:var(--background);
+  color:black;
+  margin-bottom: 30px;
+}
+
+.n, .e, .w,.s {
+  font-size: 80px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  position: relative;
+  display: inline-block;
+  font-weight: 800;
+}
+
+.n::before, .n::after, .e::before, .s::before , .s::after{
+  content: "";
+  position: absolute;
+  background-color: var(--background);
+}
+
+.n::before {
+  left: 1.8%;
+  bottom: 35%;
+  width: 34.3%;
+  height: 8.25%;
+}
+
+.n::after {
+  right: 1.8%;
+  top: 35%;
+  width: 34.3%;
+  height: 8.25%;
+}
+
+.e::before {
+  top: 36.2%;
+  left: 39%;
+  width: 23%;
+  height: 24.4%;
+}
+.s::before {
+  top: 61.2%;
+  left: 49%;
+  width: 49%;
+  height: 4.4%;
+  transform: rotate(359deg);
+} 
+.s::after {
+  top: 32.2%;
+  left: 1%;
+  width: 58%;
+  height: 4.4%;
+  transform: rotate(359deg);
+}
